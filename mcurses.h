@@ -116,7 +116,8 @@ void                     endwin (void);                                      // 
  * mcurses macros
  *---------------------------------------------------------------------------------------------------------------------------------------------------
  */
-#define erase()                 clear()                                             // clear total screen, same as clear()
+	
+//#define erase()                 clear()                                           // clear total screen, same as clear() 2017/08/04 by Tamalichi
 #define mvaddch(y,x,c)          move((y),(x)), addch((c))                           // move cursor, then add character
 #define mvaddstr(y,x,s)         move((y),(x)), addstr((s))                          // move cursor, then add string
 #define mvaddstr_P(y,x,s)       move((y),(x)), addstr_P((s))                        // move cursor, then add string (PROGMEM)

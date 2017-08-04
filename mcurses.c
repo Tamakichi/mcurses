@@ -572,7 +572,8 @@ static const char * function_keys[MAX_KEYS] =
     "5~",                       // KEY_PPAGE                0x88                // Previous-page key
     "4~",                       // KEY_END                  0x89                // End key
     "Z",                        // KEY_BTAB                 0x8A                // Back tab key
-#if 0 // VT400:
+#if 1 // VT400: 2017/08/04  2017/08/04 by Tamalichi
+//#if 0 // VT400:
     "11~",                      // KEY_F(1)                 0x8B                // Function key F1
     "12~",                      // KEY_F(2)                 0x8C                // Function key F2
     "13~",                      // KEY_F(3)                 0x8D                // Function key F3
@@ -731,7 +732,8 @@ getnstr (char * str, uint_fast8_t maxlen)
                 break;
 
             default:
-                if (curlen < maxlen && (ch & 0x7F) >= 32 && (ch & 0x7F) < 127)      // printable ascii 7bit or printable 8bit ISO8859
+//                if (curlen < maxlen && (ch & 0x7F) >= 32 && (ch & 0x7F) < 127)      // printable ascii 7bit or printable 8bit ISO8859
+                if (curlen < maxlen && (ch & 0x7F) >= 32 ) // 2017/08/04  2017/08/04 by Tamalichi
                 {
                     for (i = curlen; i > curpos; i--)
                     {
