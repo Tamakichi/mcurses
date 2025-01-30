@@ -17,6 +17,7 @@
 //
 // 修正 2018/01/30 キーコードの変更（全角文字シフトJIS対応のため）
 // 修正 2018/03/01 CTRLキー定義の追加
+// 修正 2018/08/23 KEY_LF等のキー定義の追加
 //
 
 
@@ -143,6 +144,8 @@ void                     endwin (void);                                      // 
 #define KEY_CR                  '\r'                                                // RETURN key
 #define KEY_BACKSPACE           '\b'                                                // Backspace key
 #define KEY_ESCAPE              0x1B                                                // ESCAPE (pressed twice)
+#define KEY_LF                  0x0A                                                // [LF]
+#define KEY_ENTER               '\r'                                                // [Enter] key
 
 #define KEY_UP                  0x1c                                                // Up arrow key
 #define KEY_DOWN                0x1d                                                // Down arrow key
